@@ -1,0 +1,10 @@
+version: '2'
+services:
+  xhgui:
+    image: edyan/xhgui:php7.2
+    # I need to access xhgui
+    ports:
+      - "11000:80"
+      - "27017:27017"
+    volumes:
+      - ./xhgui-config.php:/usr/local/src/xhgui/config/config.php
